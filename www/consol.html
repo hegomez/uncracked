@@ -1,0 +1,144 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>unCreacked</title>
+    <link rel="stylesheet" type="text/css" href="css/jquery.mobile.css">
+    <link rel="stylesheet" type="text/css" href="css/unCreacked.css">
+    <link rel="stylesheet" type="text/css" href="css/fontawesome.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+    <script src="js/jquery.js"></script>
+    <script type="text/javascript" charset="utf-8" src="phonegap.js"></script>
+    <script src="js/unCreacked.js"></script>
+    <script src="js/jquery.mobile.js"></script>
+</head>
+<body onload="onBodyLoad()">
+	<!-- Pagina de Inicio -->
+    <div data-role="page" id="index-consol">
+        <div data-role="header" class="head-app">
+            <h1>Consolidación</h1>
+        </div>
+        <div data-role="content" class="body-app">
+            <div class="menu">
+                <ul>
+                    <li><a href="#ConvertidosIglesia" data-rel="dialog" data-transition="pop"><img src="img/nuevos.png" alt="" title=""><span>CONVERTIDOS</span></a></li>
+                    <li><a href="#" id="menuseguimientoConsol"><img src="img/seguimiento.png" alt="" title=""><span>SEGUIMIENTOS</span></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- Pagina de Inicio -->
+    <div data-role="page" id="seguimiento-consol">
+        <div data-role="header" class="head-app">
+            <h1>Seguimientos</h1>
+        </div>
+        <div data-role="content" class="body-app">
+            <table id="tblListadoSeguimientos" class="tab tab-1">
+                <thead><tr><th>Convertido</th></tr></thead>
+                <tbody></tbody>
+            </table>
+        </div>
+    </div>
+    <!-- Espacio de Dialogos -->
+    <!-- Dialogo para el convertido -->
+    <div data-role="dialog" id="ConvertidosIglesia" data-close-btn="none">
+        <div data-role="header" class="head-dlg">
+            <h1>Convertido</h1>
+        </div>
+        <div data-role="content" class="body-dlg">
+            <span class="input-group demo-input-group">
+                <span class="input-group-addon"><i class="fa fa-user"></i></span>
+                <input data-role="none" type="text" class="form-control" id="txtNombreCnv" placeholder="Nombre">
+            </span>
+            <span class="input-group demo-input-group">
+                <span class="input-group-addon"><i class="fa fa-phone"></i></span>
+                <input data-role="none" type="nuber" class="form-control" id="txtTelCnv" placeholder="Teléfono">
+            </span>
+            <span class="input-group demo-input-group">
+                <span class="input-group-addon"><i class="fa fa-map-marker"></i></span>
+                <input data-role="none" type="text" class="form-control" id="txtDirCnv" placeholder="Dirección">
+            </span>
+            <span class="input-group demo-input-group">
+                <span class="input-group-addon"><i class="fa fa-road"></i></span>
+                <input data-role="none" type="text" class="form-control" id="txtBarrioCnv" placeholder="Barrio">
+            </span>
+            <span class="input-group demo-input-group">
+                <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+                <input data-role="none" type="date" class="form-control" id="txtNacCnv" placeholder="nacimiento">
+            </span>
+            
+        </div>
+        <div data-role="footer" class="footer-dlg">
+            <div class="div-center">
+                <a href="javascript:void(0)" data-role="button" data-rel="back" data-icon="delete">Cancelar</a>
+                <a href="javascript:void(0)" data-role="button" id="btnAddConvertidoConsol" data-icon="check">Agregar</a>
+            </div>
+        </div>
+        <div data-role="popup" id="popupConsoMsg1" style="max-width:280px">
+            <p class="msg-urgene"></p>
+            <p class="msg-info"></p>
+        </div>
+    </div>
+    <!-- Dialogo para Mostrar los datos de los asistentes en seguimiento-->
+    <div data-role="dialog" id="dlgDatosAsistente">
+        <div data-role="header" class="head-dlg">
+            <h1>Detalle</h1>
+            <div data-role="navbar">
+                <ul>
+                    <li id="at-cnv"><a href="javascript:void(0)"><i class="fa fa-arrow-left"></i></a></li>
+                    <li><a href="tel:"><i class="fa fa-phone"></i></a></li>
+                    <li><a href="#"><i class="fa fa-comment"></i></a></li>
+                    <li id="ad-cnv"><a href="javascript:void(0)"><i class="fa fa-arrow-right"></i></a></li>
+                </ul>
+            </div>
+        </div>
+        <div data-role="content" class="body-dlg dlg-asist">
+            <div class="left">
+                <div class="avatar"></div>
+                <label for="SegAlert">Alerta:</label>
+                <select id="SegAlert" data-role="slider" data-mini="true">
+                    <option value="NO" selected>NO</option>
+                    <option value="SI">SI</option>
+                </select>
+            </div>
+            <div class="right">
+                <input type="hidden" id="txtIdCnv" data-id="" data-id-bd="">
+                <span class="input-group demo-input-group">
+                    <span class="input-group-addon"><i class="fa fa-user"></i></span>
+                    <input readonly data-role="none" type="text" class="form-control" id="NameAsist">
+                </span>
+                <span class="input-group demo-input-group">
+                    <span class="input-group-addon"><i class="fa fa-phone"></i></span>
+                    <input readonly data-role="none" type="nuber" class="form-control" id="TelAsist">
+                </span>
+                <span class="input-group demo-input-group">
+                    <span class="input-group-addon"><i class="fa fa-map-marker"></i></span>
+                    <input readonly data-role="none" type="text" class="form-control" id="DirAsist">
+                </span>
+                <span class="input-group demo-input-group">
+                    <span class="input-group-addon"><i class="fa fa-road"></i></span>
+                    <input readonly data-role="none" type="text" class="form-control" id="BarrioAsist">
+                </span>
+                <span class="input-group demo-input-group">
+                    <span class="input-group-addon"><i class="fa fa-address-book-o"></i></span>
+                    <input readonly data-role="none" type="text" class="form-control" id="AgeAsist">
+                </span>
+                <span class="input-group demo-input-group">
+                    <span class="input-group-addon"><i class="fa fa-birthday-cake"></i></span>
+                    <input readonly data-role="none" type="text" class="form-control" id="NacAsist">
+                </span>
+            </div>
+            <div class="detail">
+                <textarea placeholder="Escriba el detalle de la Llamada" name="txtDetalleSeg" id="txtDetalleSeg"></textarea>
+            </div>
+        </div>
+        <div data-role="footer" class="footer-dlg">
+            <div class="div-center">
+                <a href="javascript:void(0)" data-role="button" data-rel="back" data-icon="delete">Cancelar</a>
+                <a href="javascript:void(0)" data-role="button" id="btnAddSegConsol" data-icon="check">Agregar</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,256 @@
+/*** Estilos personalizados de CBI APP ******/
+body{
+  background: transparent !important;
+  background:#38404b !important;  
+}
+.html-pag{
+  width: 94% !important;
+  margin: 2% 2%  !important;
+  border:rgb(56,146,211) solid !important;
+  border-radius: 5px !important;
+}
+
+.logo-login{
+  width: 256px;
+  height: 140px;
+  margin: 0 auto;
+  background: url(../img/login.png) !important;
+  background-position: center center !important;
+  margin-top: 15px;
+  margin-bottom: 10px!important;
+}
+
+.pass-num{
+  -webkit-text-security: disc;
+}
+
+.head-app{
+  background: #3892d3 !important;
+  border-color: #3892d3 !important;
+  color: #ffffff !important;
+  text-shadow: 1px 1px #000000 !important;
+  margin: 0px 5px 0px 5px !important;
+  border-radius: 15px 15px 0px 0px !important;
+  
+}
+
+.body-app{
+  margin: -10px 5px 0px 5px !important;
+  padding: 7px 5px 5px 5px !important;
+  border-radius: 0px 0px 10px 10px !important;
+  height:89vh !important;
+  border:rgb(56,146,211) solid !important;
+}
+
+.head-dlg{
+  background: #3892d3 !important;
+  color: #ffffff !important;
+  text-shadow: 1px 1px #000000 !important;
+  border-radius: 15px 15px 0px 0px !important;
+  border-left: 3px solid #3892d3 !important;
+  border-right: 3px solid #3892d3 !important;
+}
+
+.body-dlg{
+  padding: 15px 5px 15px 5px !important;
+  border-radius: 0px 0px 10px 10px !important;
+  border:rgb(56,146,211) solid !important;
+  border-bottom: none !important;
+  border-top: none !important;
+}
+
+.footer-dlg{
+  padding: 0px 0px 0px 5px !important;
+  border:rgb(56,146,211) solid !important;
+  border-top:none !important;
+  background: #dfeaf2 !important;
+  margin-top:-8px !important;
+}
+
+.footer-dlg a{
+  background: url(../img/btn1.jpg) !important;
+  background-position: center center !important;
+  border: 1px #126daf solid !important;
+  color: white !important;
+  text-shadow: none !important;
+}
+
+.body-app-dlg{
+  margin: -10px 5px 0px 5px !important;
+  padding: 15px 5px 15px 5px !important;
+  border-radius: 0px 0px 10px 10px !important;
+  border:rgb(56,146,211) solid !important;
+  border-bottom: none !important;
+}
+
+.footer-app-dlg{
+  margin: -8px 5px 0px 5px !important;
+  padding: 0px 0px 0px 5px !important;
+  border:rgb(56,146,211) solid !important;
+  border-top:none !important;
+  background: #dfeaf2 !important;
+}
+
+/*Botones del footer-app-dlg */
+
+.footer-app-dlg a{
+  background: url(../img/btn1.jpg) !important;
+  background-position: center center !important;
+  border: 1px #126daf solid !important;
+  color: white !important;
+  text-shadow: none !important;
+}
+
+/**Estilo de los controloes Y globales**/
+
+.div-center{
+  width: 90% !important;
+  margin:0% 5% auto !important;
+}
+
+.input-group{
+  display: inline-table;
+  vertical-align: middle;
+  position: relative;
+  border-collapse: separate;
+  box-sizing: border-box;
+  padding-bottom: 5px;
+}
+
+.input-group-addon {
+  width: 5% !important;
+}
+
+.input-group-addon .fas{
+  font-size:1.45em;
+}
+
+.form-control{
+  width: 100% !important;
+}
+
+/*Estilos de Botones*/
+.btn1{
+  background: #378FCF !important;
+  border: 1px solid #4A9CD7 !important;
+  color: white !important;
+  text-shadow: 1px 1px #000000 !important;
+}
+
+.btn1:hover{
+  background: #3182BD !important;
+  border: 1px solid #4A9CD7 !important;
+  color: white !important;
+  text-shadow: 1px 1px #000000 !important;
+}
+
+/*ESTILOS PARA EL MENU DE OPCIONES*/
+.menu{ width:100%; padding:0px;margin:0px 0 50px 0;}
+.menu ul{ list-style:none; padding:0px; margin:0px; width:100%;}
+.menu ul li{ list-style:none; margin:1% 0 2% 4%; padding:5.5% 0; width:28%;height:auto; float:left; display:block; text-align:center;
+}
+.menu ul li a{ color:#FFFFFF; text-decoration:none;  text-align: center;} 
+.menu ul li a span{ display:block; text-align:center; font-size:12px; line-height:18px; color:#121212 !important;}
+.menu ul li img{ display:inline-block;max-width:65%;}
+
+/*estilos de popup*/
+
+.msg-urgene{
+  color: #c60000 !important;
+  font-weight: bold !important;
+}
+
+.msg-info{
+  color: #0c82a5 !important;
+}
+
+/*estilos de tablas */
+
+.tab{
+  width: 100% !important;
+  max-width: 100% !important;
+  background-color: transparent;
+  border-spacing: 0 !important;
+  border-collapse: collapse;
+}
+
+.tab-1{
+  margin-top: 10px !important;
+  border: 1px solid #ddd;
+}
+
+.tab-1 > thead > tr > th,
+.tab-1 > tbody > tr > th,
+.tab-1 > tfoot > tr > th,
+.tab-1 > thead > tr > td,
+.tab-1 > tbody > tr > td,
+.tab-1 > tfoot > tr > td{
+  border: 1px solid #ddd;
+}
+
+.tab-1 > tbody > tr > td{
+  height: 35px !important;
+}
+
+.tab-1 > tbody > tr > td:active{
+  background: #d9d9d9 !important;
+}
+
+#dlgDatosAsistente .input-group{
+  padding-bottom: 0px;
+}
+
+#dlgDatosAsistente .form-control{
+  height: 25px;
+  padding: 2px 10px;
+}
+
+.dlg-asist{
+  background: white !important;
+}
+
+.dlg-asist .left{
+  position: relative;
+  width: 38% !important;
+  float: left !important;
+}
+
+.dlg-asist .left label{
+  margin: 0 !important;
+  padding: 0 !important;
+  margin-bottom: -8px !important;
+}
+
+.avatar{
+  background:url(../img/no_photo.png);
+  background-repeat: no-repeat !important;
+  background-size: 100% auto !important;
+  background-position: center center !important;
+  height: 120px !important; 
+}
+
+.dlg-asist .right{
+  position: relative;
+  min-height: 1px;
+  width: 49% !important;
+  float: left !important;
+  margin-bottom: 5px !important;
+}
+
+.dlg-asist .detail textarea{
+  height: 75px !important;
+}
+
+.dlg-asist .demo-dialog{
+  margin-bottom: 5px
+}
+
+.dlg-asist .right .form-control{
+  font-size: 14px !important;  
+  padding: 0px 2px !important;
+}
+
+.dlg-asist .right .input-group-addon{
+  padding: 0px 2px !important;
+  font-size: 10px !important;
+}

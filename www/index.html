@@ -3,13 +3,14 @@
 <head>
 	<meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>CBI</title>
+	<title>unCreacked</title>
     <link rel="stylesheet" type="text/css" href="css/jquery.mobile.css">
-    <link rel="stylesheet" type="text/css" href="css/cbi.css">
-    <link rel="stylesheet" type="text/css" href="css/font-awesome.css">
+    <link rel="stylesheet" type="text/css" href="css/unCreacked.css">
+    <link rel="stylesheet" type="text/css" href="css/fontawesome.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
     <script src="js/jquery.js"></script>
     <script type="text/javascript" charset="utf-8" src="phonegap.js"></script>
-    <script src="js/cbi.js"></script>
+    <script src="js/unCreacked.js"></script>
     <script src="js/jquery.mobile.js"></script>
 </head>
 <body onload="onBodyLoad()">
@@ -19,16 +20,21 @@
             <h1>Inicio de Sesión</h1>
         </div>
         <div data-role="content" class="body-app">
-            <div class="logo-login"></div>
-            <div class="input-group">
-                <div class="input-group-addon"><i class="fa fa-user"></i></div>
-                <input data-role="none" type="text" class="form-control" id="txtUserName" value="consolidacion" placeholder="Usuario">
+            <div class="row">
+                <div class="col-sm-12 col-md-12 col-lg-12">
+                    <div class="logo-login"></div>
+                    <div class="input-group">
+                        <div class="input-group-addon"><i class="fas fa-user"></i></div>
+                        <input data-role="none" type="text" class="form-control" id="txtUserName" value="consolidacion" placeholder="Usuario">
+                    </div>
+                    <div class="input-group">
+                        <div class="input-group-addon"><i class="fas fa-lock"></i></div>
+                        <input data-role="none" type="number" class="form-control pass-num" id="txtUserPass" value="12345" placeholder="Contraseña">
+                    </div>
+
+                    <a href="#" id="btnLogin" class="btn1" data-role="button" data-icon="arrow-r">Ingresar</a>
+                </div>
             </div>
-            <div class="input-group">
-                <div class="input-group-addon"><i class="fa fa-lock"></i></div>
-                <input data-role="none" type="text" class="form-control" id="txtUserPass" value="12345" placeholder="Contraseña">
-            </div>
-            <a href="#" id="btnLogin" class="btn1" data-role="button" data-icon="arrow-r">Ingresar</a>
         </div>
         <div data-role="popup" id="popupLoginMsg" class="ui-content" style="max-width:280px">
             <a href="#" data-rel="back" data-role="button" data-theme="a" data-icon="delete" data-iconpos="notext" class="ui-btn-left">Close</a>
