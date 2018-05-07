@@ -1,11 +1,15 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.tuidea.co.uncracked" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
-    <name>unCraked</name>
+<widget id="com.tuidea.co.uncracked" 
+    version="1.5.0"
+    versionCode = "150" 
+    xmlns="http://www.w3.org/ns/widgets" 
+    xmlns:gap="http://phonegap.com/ns/1.0">
+    <name>unCracked</name>
     <description>
-        Hello World sample application that responds to the deviceready event.
+        Sistema de Grupos de Vida Iglesia CBI Para las Naciones Fundacion
     </description>
-    <author email="support@phonegap.com" href="http://phonegap.com">
-        PhoneGap Team
+    <author href="https://www.tuidea.com.co" email="he.gomez@hotmail.com">
+        Heiner Gomez Villarreal
     </author>
     <content src="index.html" />
     <preference name="DisallowOverscroll" value="true" />
